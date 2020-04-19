@@ -1,0 +1,14 @@
+version: '3'
+services:
+   php-container:
+     container_name: phph-container
+     build:
+       context: ./
+     ports:
+       - 6002:80
+     volumes:
+        - './src:/var/www/html/'
+     networks:
+       - yoyo
+networks:
+  yoyo:
